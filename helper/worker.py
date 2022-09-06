@@ -1,5 +1,5 @@
 #    This file is part of the CompressorBot distribution.
-#    Copyright (c) 2021 Danish_00
+#    Copyright (c) 2021 Savior_128
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU General Public License as published by
@@ -87,7 +87,7 @@ async def encc(e):
         er = stderr.decode()
         try:
             if er:
-                await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+                await e.edit(str(er) + "\n\n**ERROR** Contact @Savior_128")
                 COUNT.remove(e.chat_id)
                 os.remove(dl)
                 return os.remove(out)
@@ -157,7 +157,7 @@ async def sample(e):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @Savior_128")
             COUNT.remove(e.chat_id)
             os.remove(dl)
             os.remove(out)
@@ -213,14 +213,14 @@ async def encod(event):
             pass
         xxx = await event.reply("`Downloading...`")
         """ For Force Subscribe Channel"""
-        # pp = []
-        # async for x in event.client.iter_participants("put group username"):
-        #    pp.append(x.id)
-        # if (user.id) not in pp:
-        #    return await xxx.edit(
-        #        "U Must Subscribe This Channel To Use This Bot",
-        #       buttons=[Button.url("JOIN CHANNEL", url="put group link")],
-        #   )
+         pp = []
+         async for x in event.client.iter_participants("@SaviorisGod"):
+            pp.append(x.id)
+         if (user.id) not in pp:
+           return await xxx.edit(
+                "U Must Subscribe This Channel To Use This Bot",
+               buttons=[Button.url("JOIN CHANNEL", url="https://t.me/SaviorisGod")],
+           )
         if len(COUNT) > 4 and user.id != OWNER:
             llink = (await event.client(cl(LOG))).link
             return await xxx.edit(
@@ -333,7 +333,7 @@ async def customenc(e, key):
     er = stderr.decode()
     try:
         if er:
-            await e.edit(str(er) + "\n\n**ERROR** Contact @danish_00")
+            await e.edit(str(er) + "\n\n**ERROR** Contact @Savior_128")
             COUNT.remove(e.chat_id)
             os.remove(dl)
             return os.remove(out)
